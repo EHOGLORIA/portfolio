@@ -1,18 +1,28 @@
     body {
-        display: grid;
-        justify-content: center;
         background-color: rgb(246, 243, 243);
+        /* margin: 0 8%; */
+    }
+
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+    }
+    .contenaire{
+        margin: 20px auto;
     }
     
     nav {
-        height: 5vh;
-        padding-top: 2%;
+        padding: 40px 40px;
     }
-    
+
+    .navigation nav i{
+        display: none;
+    }
+
     nav ul {
         display: flex;
-        margin-right: 4%;
-        margin-left: 4%;
         list-style-type: none;
         justify-content: space-between;
     }
@@ -33,34 +43,19 @@
         color: rgb(129, 43, 56);
     }
     
-    * {
-        margin: 0;
-        padding: 0;
-    }
-    
-    .container {
-        display: grid;
-        width: 90%;
-        max-width: 1400px;
-        justify-content: center;
-        justify-self: center;
-    }
-    
     .title_back_color_section {
-        display: grid;
         align-items: center;
         width: 100%;
         padding: 100px 10px;
         background-color: rgb(216, 128, 142);
-        background-image: url(/portfolioimage/FDsal.jpg);
+        background-image: url(./portfolioimage/FDsal.jpg);
         color: rgb(90, 50, 34);
     }
     
     .entete {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
-        width: 90%;
-        margin: auto;
         padding: 10px 40px;
         align-items: center;
     }
@@ -72,7 +67,6 @@
     .monimage {
         width: 300px;
         height: 275px;
-        /* border-radius: 50%; */
         border-radius: 90px;
     }
     
@@ -94,11 +88,12 @@
         gap: 50px;
         text-align: center;
         font-size: 1.5rem;
-      
+        
     }
     
     .parcours_back_color_section {
         display: flex;
+        flex-wrap: wrap;
         width: 100%;
         padding: 50px 10px;
         font-size: 1.1rem;
@@ -110,6 +105,10 @@
         padding: 0 40px;
        justify-content: space-between;
        
+    }
+
+    .parcours_back_color_section div{
+        margin-bottom: 10px;
     }
     
     .parcours_back_color_section div h2 {
@@ -132,26 +131,17 @@
 
     .cil{
         background-color: rgb(253, 251, 251);
-        width: 1400;
-        height: 200;
-        margin-left: 10px;
+        padding: 40px 20px;
         color: rgb(129, 43, 56);
         font-size: 20px;
         text-decoration: underline;
-    
-
-    }
-    
-    .langue2{
-        padding-left: 1000px;
-        padding-right: 40px;
-        
-        
     }
 
-    .langue{
-        padding-top: 20px;
-        padding-left: 10px;
+    .langage{
+        margin: 30px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     .competences{
@@ -159,18 +149,25 @@
         margin-top: 20px;
     }
 
-    .langue2{
-margin-top: 20px;
+    .realisations {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        color: rgb(160, 98, 107);
     }
     
     .realisations_back_color_section {
-        display: grid;
         padding: 20px 10px;
         background-color: rgb(243, 193, 231);
         color: rgb(12, 10, 10);
-        background-image: url(/portfolioimage/bg.jpg);
+        background-image: url(./portfolioimage/bg2.jpg);
         font-size: 20px;
+        justify-content: center;
         
+    }
+
+    .lorem{
+        text-align: justify;
     }
     
     .realisations_back_color_section h2 {
@@ -178,31 +175,21 @@ margin-top: 20px;
         margin-bottom: 30px;
         color: rgb(160, 98, 107);
         text-decoration: underline;
-    }
-    
-    .realisations {
-        display: flex;
-        /* width: 100%; */
-        align-items: center;
-        justify-content: space-around;
-        color: rgb(160, 98, 107);
+        
     }
     
     .realisations div {
-        width: 200px;
+        width: 300px;
         text-align: center;
         padding: 10px;
-        justify-content: center;
-        
         color: rgb(160, 98, 107);
         font-size: 20px;
     }
     
     .realisations div img {
         width: 210px;
-        height: auto;
-        /* padding-bottom: 20px; */
-        border: solid ;
+        height: 200px;
+        border: solid;
         border-radius: 90px;
         background-color: rgb(202, 160, 195);
         color: rgb(160, 98, 107);
@@ -212,10 +199,27 @@ margin-top: 20px;
         color: brown;
     }
 
+    .lien1, .lien2, .lien3{
+        margin-top: 20px;
+        border: solid;
+        padding: 10px 40px;
+        
+    }
+
+    .lien2{
+        border: solid;
+    }
+
+    .lien3{
+        border: solid;
+        
+    }
+    .projetmakeup{
+        width: 400px;
+    }
     
     .coordonnees_back_color_section,
     .coordonnees {
-        height: 100;
         background-color: rgb(241, 237, 241);
         text-align: center;
         padding-top: 30px;
@@ -224,50 +228,37 @@ margin-top: 20px;
     }
     
     .contact {
-        height: 250px;
         background-color: rgb(43, 16, 31);
         color: white;
-        font-size: 15;
-        padding-top: 40;
-    }
-
-
-    .contact{
-        display: grid;
-        grid-template: 1fr 2fr 0.5fr /1fr 1fr 1fr;
-        width: 100%;
-        height: max-content;
-        font-size: 20;
-
+        font-size: 20px;
+        padding-top: 40px;
     }
     .adresse{
-        grid-column:1/4;
         border: solid 1px;
         padding: 20px;
         font-size: 20px;
     }
-    .cc{
-        border: solid 1px;
-        grid-row: 2/3;
-        grid-column: 1/4;
-        display: grid;
-        grid-template: 1fr /1fr 1fr 1fr;
-        height: max-content;
 
-    }
-    .commentaire{
-        grid-column: 1;
+    .cc{
+        padding: 20px 0;
         border: solid 1px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .commentaire, .label3{
+        border: solid 1px;
+        margin: 15px;
         padding: 15px;
     }
+
     .commande{
-        grid-column: 2;
         border: solid 1px;
         padding: 15px;
 
     }
     .reseau{
-        grid-column: 3;
         border: solid 1px;
         padding: 15px;
         font-size: 20;
@@ -275,5 +266,59 @@ margin-top: 20px;
     }
 
     .communeaute{
-        padding-left: 650px;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .lafleche i{
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        
+        font-size: 30px;
+       
+        
+    }
+    .lafleche{
+        position: fixed;
+        bottom: 25px;
+        right: 23px;
+        background-color: rgb(231, 219, 219);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+    }
+    @media screen and (max-width:700px){
+        nav ul {
+            display: none;
+            list-style-type: none;
+            justify-content: space-between;
+        }
+
+        .navigation nav i{
+            display: flex;
+            float: right;
+            font-size: 30px;
+        }
+
+        .salutation {
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .monimage {
+            width: 200px;
+            height: 175px;
+            margin: 0 auto;
+            border-radius: 90px;
+        }
+        
+        .title_back_color_section {
+            text-align: center;
+            width: 100%;
+            padding: 100px 10px;
+            background-color: rgb(216, 128, 142);
+            background-image: url(./portfolioimage/FDsal.jpg);
+            color: rgb(90, 50, 34);
+        }
     }
